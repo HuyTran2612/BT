@@ -1,0 +1,200 @@
+/* Thiết kế tổng thể */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Phông chữ hiện đại hơn */
+    background: #e9ecef; /* Màu nền nhẹ nhàng, dễ chịu */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #495057; /* Màu chữ mặc định */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Màu liên kết */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Màu liên kết khi hover */
+}
+
+h2 {
+    color: #343a40; /* Tiêu đề đậm hơn */
+    margin-bottom: 20px;
+}
+
+/* Bảng dữ liệu */
+table {
+    width: 90%; /* Bảng rộng hơn */
+    margin: 20px auto; /* Thêm khoảng cách trên và dưới */
+    border-collapse: separate; /* Viền riêng cho từng ô */
+    border-spacing: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Đổ bóng tinh tế hơn */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px; /* Khoảng cách bên trong lớn hơn */
+    text-align: left; /* Căn trái nội dung */
+    border-bottom: 1px solid #dee2e6; /* Viền mờ hơn */
+}
+
+th {
+    background: #343a40; /* Màu nền tiêu đề đậm hơn */
+    color: white;
+    font-weight: 500; /* Tiêu đề không quá đậm */
+    text-transform: uppercase; /* Chữ hoa tiêu đề */
+    letter-spacing: 0.5px;
+}
+
+/* Loại bỏ viền dưới ở hàng cuối cùng */
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background: #f8f9fa; /* Màu nền khi hover nhẹ hơn */
+}
+
+/* Ảnh đại diện */
+img {
+    width: 50px; /* Ảnh to hơn một chút */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Phân trang */
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà hơn */
+}
+
+.pagination a.active, .pagination a:hover {
+    background: #007bff;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Đổ bóng khi hover */
+}
+
+/* Nút bấm */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: none; /* Loại bỏ viền mặc định */
+}
+
+.btn-edit {
+    background: #ffc107;
+    color: #212529; /* Màu chữ tối hơn cho nút vàng */
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px); /* Hiệu ứng nổi nhẹ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Nút thêm nhân viên */
+.btn-add {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Định dạng form thêm nhân viên */
+.container {
+    width: 60%; /* Form rộng hơn */
+    margin: 30px auto; /* Thêm khoảng cách */
+    background: #fff;
+    padding: 30px; /* Khoảng cách bên trong lớn hơn */
+    border-radius: 12px; /* Góc bo tròn hơn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500; /* Nhãn không quá đậm */
+    margin-top: 15px;
+    color: #495057;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px; /* Khoảng cách bên trong lớn hơn */
+    margin-top: 8px;
+    border: 1px solid #ced4da; /* Viền mờ hơn */
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Hiệu ứng focus */
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hiển thị thông báo lỗi */
+.error {
+    color: #dc3545;
+    font-weight: 500;
+    margin-top: 10px;
+}
