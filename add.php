@@ -1,6 +1,5 @@
 <?php
 include 'db_connect.php';
-include 'edit_nv.php';
 // Lấy danh sách mã phòng từ database
 $sqlPhong = "SELECT MaPhong, TenPhong FROM PhongBan";
 $resultPhong = $conn->query($sqlPhong);
